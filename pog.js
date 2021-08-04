@@ -1,9 +1,14 @@
-const grabString = async () => {
-  const response = await fetch('https://discord.pt/string');
-  const myJson = await response.json(); //extract JSON from the http response
-  console.log('string', myJson);
-  return myJson.string;
+const apiGet = async (endpoint) => {
+  const response = await fetch(`https://discord.pt/a/${endpoint}`);
+  const myJson = await response.json();
+  return myJson;
 }
+
+const grabString = async () => {
+  const resp = await apiGet('string');
+  return resp.string;
+}
+
 
 window.addEventListener('load', async (event) => {
     console.log('The page has fully loaded');
