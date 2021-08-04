@@ -11,7 +11,6 @@ const grabString = async () => {
 
 
 window.addEventListener('load', async (event) => {
-    console.log('The page has fully loaded');
 	const str = await grabString();
 	document.getElementById('url-string').innerText = str;
 });
