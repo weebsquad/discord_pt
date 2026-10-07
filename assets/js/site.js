@@ -1,19 +1,3 @@
-const updateLinkLabel = async () => {
-	const label = document.getElementById('url-string');
-	if (!label || location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
-
-	try {
-		const response = await fetch('/a/string');
-		if (!response.ok) return;
-		const result = await response.json();
-		if (typeof result.string === 'string' && result.string.length > 0) {
-			label.textContent = result.string;
-		}
-	} catch {
-		// Keep the local fallback label when the optional text endpoint is unavailable.
-	}
-};
-
 const setupRedirectPrank = () => {
 	const bar = document.getElementById('progress-fill');
 	const percent = document.getElementById('redirect-percent');
@@ -32,18 +16,21 @@ const setupRedirectPrank = () => {
 		'Your request is important to somebody…',
 		'Waiting for a very small wheel to spin…',
 	];
-	const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	let progress = 8;
 	let escapeCount = 0;
 	let isRunning = false;
 	let pinned = false;
 
 	button.addEventListener('focus', () => {
-		pinned = true;
+		pinned = button.matches(':focus-visible');
+	});
+
+	button.addEventListener('blur', () => {
+		pinned = false;
 	});
 
 	button.addEventListener('pointerenter', (event) => {
-		if (event.pointerType !== 'mouse' || reducedMotion || pinned || isRunning || escapeCount >= 3) return;
+		if (event.pointerType !== 'mouse' || pinned || isRunning || escapeCount >= 3) return;
 
 		const zoneBounds = zone.getBoundingClientRect();
 		const maxLeft = Math.max(0, zone.clientWidth - button.offsetWidth);
@@ -100,5 +87,4 @@ const setupRedirectPrank = () => {
 	});
 };
 
-updateLinkLabel();
 setupRedirectPrank();

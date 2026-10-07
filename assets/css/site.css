@@ -43,14 +43,14 @@ a:focus-visible, button:focus-visible { outline: 3px solid #607f88; outline-offs
 	width: 100%;
 	overflow: hidden;
 	border-block: 1px solid #3e4a50;
-	background: #4d5a60;
-	color: #f7f5ef;
-	font: 700 .78rem 'Oswald', Impact, sans-serif;
-	letter-spacing: .08em;
+	background: #e6edeb;
+	color: #303841;
+	font: 500 .9rem/1.25 system-ui, sans-serif;
+	letter-spacing: .015em;
 	white-space: nowrap;
 }
-.ticker__track { display: flex; width: max-content; animation: ticker-scroll 34s linear infinite; }
-.ticker__track span { flex: 0 0 auto; padding: .55rem 12px; }
+.ticker__track { display: flex; width: max-content; animation: ticker-scroll 22s linear infinite; }
+.ticker__track span { flex: 0 0 auto; padding: .5rem 12px; }
 
 .poster {
 	width: min(1040px, calc(100% - 32px));
@@ -111,7 +111,7 @@ h1 {
 .main-card h2 { max-width: 520px; margin: 8px auto 0; font-size: clamp(1.4rem, 4vw, 2.35rem); line-height: 1.05; }
 .main-card h2 em { color: var(--hot-pink); text-decoration: underline wavy; }
 .big-link { display: flex; align-items: baseline; justify-content: center; gap: 4px; margin: .12em 0; font: 700 clamp(2.7rem, 9vw, 6.2rem)/1 'Oswald', Impact, sans-serif; }
-.link-label { color: #607f88; overflow-wrap: anywhere; }
+.link-label { color: #607f88; white-space: nowrap; }
 .question { color: var(--hot-pink); }
 .small-print { margin: .7rem 0 1rem; font-size: .88rem; }
 
@@ -186,7 +186,7 @@ h1 {
 .meme-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font: 700 .78rem 'Oswald', Impact, sans-serif; }
 .meme-bottom strong { color: var(--hot-pink); }
 
-@keyframes ticker-scroll { to { transform: translateX(-50%); } }
+@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes poster-arrival { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 700px) {
@@ -213,5 +213,9 @@ h1 {
 
 @media (prefers-reduced-motion: reduce) {
 	*, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-	.ticker__track { animation: none; }
+	.ticker__track {
+		animation-name: ticker-scroll !important;
+		animation-duration: 22s !important;
+		animation-iteration-count: infinite !important;
+	}
 }
