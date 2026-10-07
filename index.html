@@ -1,40 +1,74 @@
+<!doctype html>
+<html lang="en">
 <head>
-	<title>disocrd.pt</title>
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
-	<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
-	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
-	<meta name="application-name" content="&nbsp;"/>
-	<meta name="msapplication-TileColor" content="#FFFFFF" />
-	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
-	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-	<meta property="og:title" content="disocrd.pt" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="http://discord.pt" />
-	<meta property="og:image" content="http://discord.pt/favicon-128.png" />
-	<meta property="og:description" content="discord moment" />
-	<meta name="theme-color" content="#FF00AA">
-
-	<!-- Include this to make the og:image larger -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#4d5a60">
+	<meta property="og:title" content="disocrd.pt — absolutely not a redirect">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="The internet's least helpful hyperlink experience.">
 	<meta name="twitter:card" content="summary_large_image">
-	<script src="pog.js"></script>
-	<link rel="stylesheet" href="gamer.css">
+	<title>disocrd.pt — absolutely not a redirect</title>
+	<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="assets/css/site.css">
+	<script src="assets/js/site.js" defer></script>
 </head>
-<html>
-	<h1>How about I don't redirect you to <a id="url-string" href="https://discord.pt/meme">discord</a> ?</h1>
-	<div id="my-element" class="col-sm-12">
-		<b>@ <a href="https://github.com/weebsquad/discord_pt">github</a></b>
+<body class="home-page">
+	<a class="skip-link" href="#main">Skip the nonsense</a>
+	<div class="ticker" aria-label="Important announcement">
+		<div class="ticker__track" aria-hidden="true"><span>PLEASE HOLD &middot; THE BUTTON IS CONSULTING ITS LAWYER &middot; LOADING BACKWARDS &middot; </span><span>PLEASE HOLD &middot; THE BUTTON IS CONSULTING ITS LAWYER &middot; LOADING BACKWARDS &middot; </span></div>
 	</div>
+	<main id="main" class="poster">
+		<header class="masthead">
+			<p class="eyebrow">Probably #1 in Portugal</p>
+			<h1>DIS<span class="title-o">O</span>CRD<span class="dot">.PT</span></h1>
+			<p class="subtitle">URL provided. Results uncertain.</p>
+		</header>
+
+		<div class="hero-grid">
+			<aside class="sticker sticker--left" aria-label="Unofficial seal">
+				<img src="assets/images/official-ish.svg" alt="A crooked seal reading Official-ish, probably">
+				<span>VERY<br>REAL<br>SEAL</span>
+			</aside>
+			<section class="main-card" aria-labelledby="main-message">
+				<div class="card-topline"><span>EST. 2021-ISH</span><span>NO REFUNDS</span></div>
+				<div class="warning-row">
+					<img class="warning-art" src="assets/images/under-construction.svg" alt="A tiny person waving from behind a construction sign">
+					<p class="warning-label">PLEASE<br><span>WAIT</span></p>
+				</div>
+				<h2 id="main-message">How about I <em>don't</em> redirect you to</h2>
+				<p class="big-link"><span class="link-label" id="url-string">discord</span><span class="question">?</span></p>
+				<p class="small-print">Inspected by nobody.</p>
+				<div class="redirect-demo" id="redirect-demo">
+					<div class="redirect-demo__heading"><span class="status-light" aria-hidden="true"></span><span>STATUS: WHO KNOWS</span><span class="redirect-demo__percent" id="redirect-percent">00%</span></div>
+					<div class="progress-track" role="presentation"><span class="progress-fill" id="progress-fill"></span></div>
+					<p class="redirect-status" id="redirect-status">Click. Regret.</p>
+					<p class="redirect-disclaimer">May reverse. Won't finish.</p>
+				</div>
+				<div class="button-row">
+					<div class="redirect-button-zone" id="redirect-button-zone">
+						<button class="ugly-button" id="redirect-trigger" type="button" aria-describedby="redirect-status">Redirect to discord</button>
+					</div>
+					<span class="arrow" aria-hidden="true">↙</span>
+				</div>
+			</section>
+			<aside class="sticker sticker--right" aria-label="Pointless award">
+				<img src="assets/images/award.svg" alt="A yellow starburst award">
+				<span>100%<br>URL<br>BASED</span>
+			</aside>
+		</div>
+
+		<section class="junk-row" aria-label="Unnecessary website statistics">
+			<div class="junk-box counter"><span class="junk-label">VISITORS</span><strong>000000<span>7</span></strong></div>
+			<div class="junk-box status"><span class="status-light" aria-hidden="true"></span><span class="junk-label">SERVER MOOD</span><strong>confused</strong></div>
+			<div class="junk-box seal-box"><img src="assets/images/official-ish.svg" alt=""><span>Certified-ish</span></div>
+		</section>
+
+		<footer class="site-footer">
+			<span>Best viewed on a calculator.</span>
+			<a href="https://github.com/weebsquad/discord_pt">source code <span aria-hidden="true">↗</span></a>
+		</footer>
+	</main>
+	<div class="corner-note" aria-hidden="true">WEB<br>2.???</div>
+</body>
 </html>

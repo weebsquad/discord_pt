@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 150" role="img" aria-labelledby="title">
+  <title id="title">Tiny confused construction worker and caution sign</title>
+  <rect x="9" y="22" width="242" height="83" rx="8" fill="#dfd09e" stroke="#303841" stroke-width="7" transform="rotate(-3 130 63)"/>
+  <path d="m34 93 20-48 20 48zm41 0 20-48 20 48zm41 0 20-48 20 48zm41 0 20-48 20 48" fill="#c9828b" stroke="#303841" stroke-width="5"/>
+  <path d="M34 123h193" stroke="#303841" stroke-width="7" stroke-linecap="round"/>
+  <path d="M78 123V90m-9 33h19" stroke="#738f96" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="78" cy="81" r="14" fill="#d2aa88" stroke="#303841" stroke-width="4"/>
+  <path d="m64 79 7-17 24 3-4 15z" fill="#a95f70" stroke="#303841" stroke-width="4"/>
+  <circle cx="74" cy="82" r="2" fill="#303841"/><circle cx="83" cy="82" r="2" fill="#303841"/>
+  <path d="M74 89q5-4 10 0" fill="none" stroke="#303841" stroke-width="2"/>
+  <text x="186" y="120" text-anchor="middle" font-family="Impact, sans-serif" font-size="12" fill="#303841">STILL LOADING</text>
+</svg>
